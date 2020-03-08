@@ -1,0 +1,39 @@
+.chat-main
+  .chat-main__header
+    .current-group
+      .current-group__name
+        チャットグループ１
+      .current-group__members
+        Member: kimu hoge
+
+    .group-edit
+      = link_to "#", class: "edit-btn" do
+        Edit
+
+  .chat-main__messages
+    .message
+      .message__info
+        .message__info--name
+          kimu
+        .message__info--date-time
+          2020/02/29(Sat) 12:34:56
+      .message__text
+        こんにちは
+      
+    .message
+      .message__info
+        .message__info--name
+          kimu
+        .message__info--date-time
+          2020/02/29(Sat) 13:45:06
+      .message__text
+        おはよう
+
+  .chat-main__form
+    %form.new_message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('far', 'far fa-image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
