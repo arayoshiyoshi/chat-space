@@ -1,0 +1,25 @@
+.chat-side
+  .chat-side__header
+
+    .top-items
+      .top-items__name
+        = current_user.name
+      .top-items__icons
+        = link_to "#", class: "icon" do
+          = icon('fas', 'fas fa-edit')
+        = link_to "#", class: "icon" do 
+          = icon('fa', 'fa fa-cog')
+
+  .chat-side__groups
+
+    .group
+      .group__name
+        チャットグループ名2
+      .group__text
+        メッセージ2
+
+    .group
+      .group__name
+        チャットグループ名1
+      .group__text
+        メッセージ1
