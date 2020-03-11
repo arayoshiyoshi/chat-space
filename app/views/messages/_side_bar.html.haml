@@ -5,7 +5,8 @@
       .top-items__name
         = current_user.name
       .top-items__icons
-        = link_to "#", class: "icon" do
+        -# = link_to groups_path, class: "icon" do
+        = link_to new_group_path, class: "icon" do
           = icon('fas', 'fas fa-edit')
         = link_to edit_user_path(current_user), class: "icon" do 
           = icon('fa', 'fa fa-cog')
