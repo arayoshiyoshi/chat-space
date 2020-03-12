@@ -35,11 +35,11 @@
   &__groups{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
-
     .group{
       color: #ffffff;
-      font-weight: bold;
+      font-weight: bold; 
       padding: 20px 20px 40px;
+      text-decoration: none;
       &__name{
         font-size: 15px;
         margin-bottom: 5px;
@@ -47,7 +47,6 @@
       &__text{
         font-size: 11px;
       }
-
     }
   }
 }

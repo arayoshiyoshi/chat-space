@@ -1,26 +1,20 @@
 .chat-side
   .chat-side__header
-
     .top-items
       .top-items__name
         = current_user.name
       .top-items__icons
-        -# = link_to groups_path, class: "icon" do
         = link_to new_group_path, class: "icon" do
           = icon('fas', 'fas fa-edit')
         = link_to edit_user_path(current_user), class: "icon" do 
           = icon('fa', 'fa fa-cog')
 
+
   .chat-side__groups
-
-    .group
-      .group__name
-        チャットグループ名2
-      .group__text
-        メッセージ2
-
-    .group
-      .group__name
-        チャットグループ名1
-      .group__text
-        メッセージ1
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__text
+            メッセージはまだありません。
