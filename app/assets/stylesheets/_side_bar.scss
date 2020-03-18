@@ -36,17 +36,22 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     .group{
-      color: #ffffff;
+      // color: #ffffff;
       font-weight: bold; 
       padding: 20px 20px 40px;
-      text-decoration: none;
+      
       &__name{
         font-size: 15px;
         margin-bottom: 5px;
+        color: white;
       }
       &__text{
         font-size: 11px;
+        color: white;
       }
     }
   }
+}
+a{
+  text-decoration: none;
 }
