@@ -56,7 +56,7 @@ Things you may want to cover:
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text||
+|content|text||
 |image|text||
 |user|reference|null: false, foreign_key: true|
 |group|reference|null: false, foreign_key: true|
