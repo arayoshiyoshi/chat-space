@@ -2,37 +2,36 @@ $(function(){
 
   var buildHTML = function(message){
     var html =
-      `<div class="message" data-message-id=` + message.id + `>
+      `<div class="message" data-message-id=${message.id}>
       <div class="message__info">
-        <div class="message__info--name">` +
-          message.user_name +
-        `</div>
-        <div class="message__info--date-time">` +
-          message.created_at +
-        `</div>
+        <div class="message__info--name">
+          ${message.user_name}
+        </div>
+        <div class="message__info--date-time">
+          ${message.created_at}
+        </div>
       </div>
       <div class="message__text">
       `
 
     if (message.content && message.image) {
-      var html = html + 
-        `<p class="message__text--plaintext">` +
-          message.content +
-        `</p>
-        <img src="` + message.image + `" class="message__text--image" >
+      var html = html
+        `<p class="message__text--plaintext">
+          ${message.content}
+        </p>
+        <img src="${message.image}" class="message__text--image">
         `
     } else if (message.content) {
-      var html = html + 
-        `<p class="message__text--plaintext">` +
-          message.content +
-        `</p>
+      var html = html +
+        `<p class="message__text--plaintext">
+          ${message.content}
+        </p>
         `
     } else if (message.image) {
       var html = html +
-        `<img src="` + message.image + `" class="message__text--image" >`
+        `<img src="${message.image}" class="message__text--image" >`
     };
-    var html = html + 
-      `</div>`
+    var html = html + `</div>`
     return html;
   }
 
