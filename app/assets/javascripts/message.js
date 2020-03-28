@@ -15,7 +15,7 @@ $(function(){
       `
 
     if (message.content && message.image) {
-      var html = html
+      var html = html +
         `<p class="message__text--plaintext">
           ${message.content}
         </p>
